@@ -1,0 +1,11 @@
+/Users/QamarMirza/Projects/paidbackendapi/paidbackendapi/bin/Debug/netcoreapp2.0/paidbackendapi.deps.json
+/Users/QamarMirza/Projects/paidbackendapi/paidbackendapi/bin/Debug/netcoreapp2.0/paidbackendapi.runtimeconfig.json
+/Users/QamarMirza/Projects/paidbackendapi/paidbackendapi/bin/Debug/netcoreapp2.0/paidbackendapi.runtimeconfig.dev.json
+/Users/QamarMirza/Projects/paidbackendapi/paidbackendapi/bin/Debug/netcoreapp2.0/paidbackendapi.dll
+/Users/QamarMirza/Projects/paidbackendapi/paidbackendapi/bin/Debug/netcoreapp2.0/paidbackendapi.pdb
+/Users/QamarMirza/Projects/paidbackendapi/paidbackendapi/obj/Debug/netcoreapp2.0/paidbackendapi.csprojAssemblyReference.cache
+/Users/QamarMirza/Projects/paidbackendapi/paidbackendapi/obj/Debug/netcoreapp2.0/paidbackendapi.csproj.CoreCompileInputs.cache
+/Users/QamarMirza/Projects/paidbackendapi/paidbackendapi/obj/Debug/netcoreapp2.0/paidbackendapi.AssemblyInfoInputs.cache
+/Users/QamarMirza/Projects/paidbackendapi/paidbackendapi/obj/Debug/netcoreapp2.0/paidbackendapi.AssemblyInfo.cs
+/Users/QamarMirza/Projects/paidbackendapi/paidbackendapi/obj/Debug/netcoreapp2.0/paidbackendapi.dll
+/Users/QamarMirza/Projects/paidbackendapi/paidbackendapi/obj/Debug/netcoreapp2.0/paidbackendapi.pdb
