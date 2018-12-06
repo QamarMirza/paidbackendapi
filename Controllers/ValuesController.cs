@@ -13,11 +13,6 @@ using pictures;
 
 namespace paidbackendapi.Controllers
 {
-    public class Data
-    {
-        public List<String> Names;
-        public List<PictureTemplates> Content; 
-    }
 
     [Route("api/[controller]")]
     [EnableCors("MyPolicy")]

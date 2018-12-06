@@ -25,4 +25,9 @@ namespace pictures
         public string address;
         public string registered;
     }
+    public class Data
+    {
+        public List<String> Names;
+        public List<PictureTemplates> Content;
+    }
 }
