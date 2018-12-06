@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
-using System.Web;
-using Microsoft.AspNetCore.Cors;
+﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+using paidbackendapi.Services;
 using pictures;
 
 namespace paidbackendapi.Controllers
@@ -18,9 +10,6 @@ namespace paidbackendapi.Controllers
     [EnableCors("MyPolicy")]
     public class ValuesController : Controller
     {
-        List<PictureTemplates> mockData = new List<PictureTemplates>();
-        List<String> Names = new List<string>();
-        readonly string path = Path.Combine(Environment.CurrentDirectory, @"Data/mockData.json");
 
         // GET api/values
         [HttpGet]
@@ -28,17 +17,6 @@ namespace paidbackendapi.Controllers
         {
             string filter = "";
             string sort = "";
-
-            var jsonArray = System.IO.File.ReadAllText(path);
-            mockData = JsonConvert.DeserializeObject<List<PictureTemplates>>(jsonArray);
-
-            foreach (var post in mockData)
-            {
-                if (!Names.Contains(post.user.name))
-                {
-                    Names.Add(post.user.name);
-                }
-            }
 
             if (Request.QueryString.Value.ToString().Length > 1)
             {
@@ -57,28 +35,8 @@ namespace paidbackendapi.Controllers
 
 
             }
-
-            List<PictureTemplates> returnList = new List<PictureTemplates>();
-            if (filter.Length > 0)
-            {
-                foreach (var item in mockData)
-                {
-                    if (item.user.name.ToLower().Equals(filter)){
-                        returnList.Add(item);
-                    }
-                }
-            }
-
-            if (!returnList.Any())
-            {
-                returnList = mockData;
-            }
-
-            return new Data
-            {
-                Names = Names,
-                Content = returnList
-            };
+            ValueService valueService = new ValueService();
+            return valueService.GetValues(filter, sort);
         }
 
 
